@@ -2,7 +2,7 @@
 # tasks file for kibana
 - name: Upload .tar.gz file containing binaries from local storage
   copy:
-    src: "kibana-{{ kibana_version }}-linux-x86_64.tar.gz"
+    src: "{{ playbook_dir }}/files/kibana-{{ kibana_version }}-linux-x86_64.tar.gz"
     dest: "/tmp/kibana-{{ kibana_version }}-linux-x86_64.tar.gz"
     mode: '0755'
   register: download_kibana_binaries
